@@ -14,7 +14,7 @@ class NetworkModel:
             raise NetworkSecurityException(e,sys)
     def predict(self,x):
         try:
-            x_tansform=self.preprocessor.transform(x)
+            x_transform=self.preprocessor.transform(x)
             y_hat=self.model_predict(x_transform)
             return y_hat
         except Exception as e:
