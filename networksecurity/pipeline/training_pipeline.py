@@ -63,7 +63,7 @@ class TrainingPipeline:
 
         def start_model_trainer(self,data_transformation_artifact:DataTransformationArtifact)->ModelTrainerArtifact:
             try:
-                self.model_trainer_config:ModelTrainerConfig=ModelTrainerConfig(
+                self.model_trainer_config=ModelTrainerConfig(
                     trainig_pipeline_config=self.trainig_pipeline_config
                 )
                 logging.info("started the model traininig")
