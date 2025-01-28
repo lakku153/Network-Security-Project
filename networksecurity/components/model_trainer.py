@@ -24,6 +24,8 @@ from sklearn.ensemble import(
     GradientBoostingClassifier,
     RandomForestClassifier
 )
+from dotenv import load_dotenv
+load_dotenv()
 
 
 dagshub.init(repo_owner='lakku153', repo_name='Network-Security-Project', mlflow=True)
