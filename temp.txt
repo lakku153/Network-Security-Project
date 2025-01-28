@@ -23,3 +23,5 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 newgrp docker
+
+token_dagshub = dee11cac8f7c1933a1956dc012186c6c82e3e463
