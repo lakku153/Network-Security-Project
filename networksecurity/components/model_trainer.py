@@ -2,6 +2,9 @@ import os
 import sys
 import mlflow
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 
@@ -24,12 +27,10 @@ from sklearn.ensemble import(
     GradientBoostingClassifier,
     RandomForestClassifier
 )
-from dotenv import load_dotenv
-load_dotenv()
 
 
 dagshub.init(repo_owner='lakku153', repo_name='Network-Security-Project', mlflow=True)
-dagshub.auth.add_app_token(os.getenv('DAGSHUB_TOKEN'))
+dagshub.auth.add_app_token(os.getenv('DAGSHUB_USER_TOKEN'))
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
